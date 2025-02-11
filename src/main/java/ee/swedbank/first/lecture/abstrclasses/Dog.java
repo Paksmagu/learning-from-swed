@@ -1,8 +1,8 @@
-package ee.swedbank.first;
+package ee.swedbank.first.lecture.abstrclasses;
 
 public class Dog extends Mammal {
     @Override
-    void shedHair() {
+    public void shedHair() {
         System.out.println("Alot of hair");
     }
 
