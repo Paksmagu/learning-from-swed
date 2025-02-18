@@ -19,21 +19,7 @@ public record Building(
 
     @Override
     public String getMarker() {
-        switch (buildingType) {
-            case BUSINESS -> {
-                return Color.BLUE.name() + " " + PointMarker.DIAMOND.name();
-            }
-            case COMMERCIAL -> {
-                return Color.YELLOW.name() + " " + PointMarker.TRIANGLE.name();
-            }
-            case LIVING -> {
-                return Color.GREEN.name() + " " + PointMarker.CIRCLE.name();
-            }
-            case GOVERNMENT -> {
-                return Color.RED.name() + " " + PointMarker.SQUARE.name();
-            }
-            default -> throw new IllegalStateException("Unexpected value: " + buildingType);
-        }
+        return buildingType.getMarker();
     }
 
     @Override
